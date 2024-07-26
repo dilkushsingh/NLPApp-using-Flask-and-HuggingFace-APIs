@@ -7,6 +7,10 @@
 <body style="background-color:#b3d5f4">
     <h1>NLPApp</h1>
     <h3>Registration</h3>
+
+    {% if message %}
+        <p style="color:red">{{ message }}</p>
+    {% endif %}
     <form action="/perform_registration" method="post">
         <label>Name</label><br>
         <input type="text" name="user_name" required><br>

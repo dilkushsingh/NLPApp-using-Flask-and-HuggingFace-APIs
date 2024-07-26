@@ -7,6 +7,13 @@
 <body style="background-color:#b3d5f4">
     <h1>NLPApp</h1>
     <h3>Login</h3>
+
+    {% if message %}
+        {% if color %}
+            <p style="color:green">{{ message }}</p>
+        {% endif %}
+            <p style="color:red">{{ message }}</p>
+    {% endif %}
     <form action="/perform_login" method="post">
         <label>Email</label><br>
         <input type="email" name="user_email" required><br>
