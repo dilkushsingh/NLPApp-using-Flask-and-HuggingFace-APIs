@@ -40,11 +40,15 @@ def profile():
 def ner():
     return render_template('ner.html')
 
+@app.route('/perform_ner', methods=['post'])
+def perform_ner():
+    text = request.form.get('text')
+
 @app.route('/sentiment')
 def sentiment():
-    return 'sentimen'
+    return render_template('sentiment.html')
 
 @app.route('/emotion')
 def emotion():
-    return 'emotion'
+    return render_template('emotion.html')
 app.run(debug=True)
