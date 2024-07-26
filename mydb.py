@@ -9,7 +9,7 @@ class Database:
         else:
             database[email] = [name, password]
             with open('db.json', 'w') as wf:
-                json.dump(database, wf)
+                json.dump(database, wf, indent=4)
             return 1
     def search_user(self, email, password):
         with open('db.json', 'r') as rf:
