@@ -1,7 +1,7 @@
 import requests
 class API:
     def __init__(self):
-        self.api = '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'
+        self.api = 'Hugging Face API'
         self.headers = {"Authorization": f"Bearer {self.api}"}
     def ner(self, text):
         API_URL = "https://api-inference.huggingface.co/models/dbmdz/bert-large-cased-finetuned-conll03-english"
