@@ -7,10 +7,17 @@
 <body style="background-color:#b3d5f4">
     <h1>NLPApp</h1>
     <h3>Emotion Detection</h3>
-    <form>
+    <form action="/perform_emotion" method="post">
         <label>Enter Text:</label><br>
         <textarea name='text' required></textarea><br><br>
         <input type="submit" value="Detect Emotions">
     </form>
+
+    {% if result %}
+        {% for emotion in result[0]: %}
+            <p>{{ 'emotion',emotion['label'], 'score',emotion['score'] }}</p>
+        {% endfor %}
+    {% endif %}
+
 </body>
 </html>

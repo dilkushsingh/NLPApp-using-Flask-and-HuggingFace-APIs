@@ -12,5 +12,10 @@
         <textarea name='text' required></textarea><br><br>
         <input type="submit" value="Perform NER">
     </form>
+
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+
 </body>
 </html>

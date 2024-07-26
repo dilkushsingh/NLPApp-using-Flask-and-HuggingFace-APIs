@@ -7,10 +7,15 @@
 <body style="background-color:#b3d5f4">
     <h1>NLPApp</h1>
     <h3>Sentiment Analysis</h3>
-    <form>
+    <form action="/perform_sentiment" method="post">
         <label>Enter Text:</label><br>
         <textarea name='text' required></textarea><br><br>
         <input type="submit" value="Analyze Sentiments">
     </form>
+
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+
 </body>
 </html>
