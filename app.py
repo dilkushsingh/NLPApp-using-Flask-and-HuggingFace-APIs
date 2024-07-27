@@ -62,7 +62,7 @@ def perform_sentiment():
     print(result)
     txt = ''
     for i in range(len(result[0])):
-        txt += f'{result[0][i]['label']} : {round(result[0][i]['score'] * 100, 2)}%\n'
+        txt += f"{result[0][i]['label']} : {round(result[0][i]['score'] * 100, 2)}%\n"
     return render_template('sentiment.html', result=txt)
 
 
